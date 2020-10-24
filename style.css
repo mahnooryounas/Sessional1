@@ -1,0 +1,418 @@
+{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.brand
+{
+  font-size: 30px;
+  font-weight: 13px;
+}
+.menu-bar
+
+{
+  background-image: linear-gradient(to right , black, black)
+}
+/******nav bar ******/
+.nav-link
+{
+  font-size: 16px;
+  color: #fff !important;
+  margin: 1px;
+}
+.navbar-brand img
+{
+  height:30px;
+  padding-left: 20px;
+}
+
+/******backimage ******/
+.backimage{
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg");
+  background-size: 100% 100%
+  background-attachment: fixed;
+  width: 100%;
+  height: 600px;
+}
+
+/****social media****/
+#social-media p
+{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+   
+}
+.social-icons img
+{
+  width:60px;
+  transition: 0.5s;
+}
+.social-icons a:hover img
+{
+  transform: translateY(-10px);
+}
+
+/******footer******/
+#footer
+{
+  background :#333;
+  color:#fff;
+  padding: 12px;
+}
+
+.flag {
+
+background-repeat: no-repeat;
+overflow: hidden;
+padding-bottom: 10%;
+padding-top: 20%;
+background-size: 100% 100%;
+width: 40px;
+height: 20px;
+}
+
+.us {
+
+background-image: url('data:image/png;base64,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');
+width: 40px;
+height: 20px;
+
+}
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 80px;
+  left: 70%;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-blockk {
+  position: absolute;
+  bottom: 80px;
+  right: 70%;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.series {
+top: 100%;
+ bottom: 100px;
+  left: 100%;
+  background-color: #03fc96;
+  font-size: 15px;
+  width: 100%;
+height: 40px;
+ margin: auto;
+   padding: 10px;
+}
+
+.seriess {
+top: 100%;
+ bottom: 100px;
+  left: 100%;
+  font-size: 12px;
+  width: 100%;
+height: 30px;
+}
+
+p.solid {border-style: solid;
+
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #03fc96;
+}
+
+.button1:hover {
+  background-color:#03fc96;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+  background-color: black;
+  position: relative;
+
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 4 4px;
+    background-color: black;
+  position: relative;
+  
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 4 4px;
+  background-color: black;
+  position: relative;
+  
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 100%) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+      position: relative;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 100%) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+      position: relative;
+  }
+}
+
+p.solid {border: 2px solid black ;
+  border-radius: 5px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px
+
+ }
+
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: skyblue;
+  color: black;
+}
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid white;
+
+  width: 200px;
+  height: 60px;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+p.a {
+  text-align: center;
+  
+    color: white;
+}
+
+p.s {
+  text-align: center;
+  font-size: 30px;
+ 
+   color: white;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: black;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 60px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+  color: white;
+    text-align: center;
+  font-size: 30px;
+}
+
+.fa-twitter {
+
+  color: white;
+    text-align: center;
+  font-size: 30px;
+}
+
+.fa-instagram {
+
+  color: white;
+    text-align: center;
+  font-size: 30px;
+}

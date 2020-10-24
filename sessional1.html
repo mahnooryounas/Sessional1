@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>bleacherreport</title> 
+<link rel="stylesheet" href="style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<div class="backimage">
+<section id="header">
+	<div class="menu-bar">
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" width="80" height="60"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">NFL</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link" href="#">NBA</a>
+      </li>
+      &nbsp;
+       <li class="nav-item">
+        <a class="nav-link" href="#">CFB</a>
+      </li>
+      &nbsp;
+       <li class="nav-item">
+        <a class="nav-link" href="#">WorldFootball</a>
+      </li>
+      &nbsp;
+       <li class="nav-item">
+        <a class="nav-link" href="#">MLB</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link" href="#">NHL</a>
+      </li>
+      &nbsp;
+      <li class="nav-item" >
+        <a class="nav-link " href="#" >CBB</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >More</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >Shows</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >B/R Kicks</a>
+      </li> 
+      &nbsp;
+       <li class="nav-item">
+        <a class="nav-link " href="#" >B/R Live</a>
+      </li>      
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >Mag</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >Get the App</a>
+      </li>      
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link " href="#" >B/R Shop</a>
+      </li>      
+
+     
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     <li class="flag us"></li>
+
+
+         <li class="nav-item">
+        <a class="nav-link " href="#" >Account</a>
+      </li>
+
+ 
+
+    </ul>
+
+  </div>
+</nav>
+</div>	
+</section>
+
+<img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/8f/bb/bc/c5/d127/457f/93cc/3eeca44870c0/crop_exact_WorldSeries3x2.jpg" alt="Flowers in Chania" width="100%" height="900px">
+
+<div class="container">
+
+
+  <div class="text-block">
+
+ <div class="series">
+    	<p  >  <img src="https://bleacherreport.com/img/atoms/svg/icons/slash.svg" alt="splash" style="width:12px;">
+    		<b>WORLD SERIES</b></p>
+
+</div>
+
+    <h1 class="solid">
+
+            <a  href="#" ><b>INSIDE THE STRANGEST WORLD SERIES EVER </b></a>
+    </h1>
+
+    	<p  >  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Morse_code_dash.svg/1200px-Morse_code_dash.svg.png" alt="splash" style="width:30%;"></p>
+
+    <p>
+            <a  href="#" >‘It’s weird. It’s sad. But it’s still very exciting.’ Scott Miller on what it's like at unprecedented World Series ➡️
+</a>
+    </p>
+
+      	<p class="seriess">by Scott Miller</p>
+
+  </div>
+</div>
+
+<div class="w3-container">
+<br />
+<br />
+
+<div class="w3-bar w3-border-white w3-white" style="padding-left: 10%">
+
+  <div style="  background-color:#03fc96; font-size: 13px " class="w3-bar-item"><b>TOP NEWS</b> </div>
+  <div class="w3-bar-item">&nbsp;&nbsp;&nbsp;Amar'e Stoudemire to Join Nets StaffReport &nbsp;&nbsp;|</div>
+  <div class="w3-bar-item">NBA Targeting Dec. 22 StartBuzz&nbsp;&nbsp;|</div>
+  <div class="w3-bar-item">Darnold Expected to Play Sun&nbsp;&nbsp; </div>
+
+</div>
+
+
+<br />
+<br />
+<h1 style="text-align: center;"><b>N F L</b></h1>
+<br/>
+<div style="display:block;text-align:left; padding-left: 10%; padding-right: 10%;  margin: auto;">
+	<a href="https://some.addres" imageanchor="1"><img align="left" src="https://media.bleacherreport.com/f_auto,w_768,q_auto,c_fill/br-cms/b1/36/c9/1a/562f/4268/8af3/c19749c36b5e/crop_exact_GettyImages-1229013955.jpg" border="0" width="60%"></a>
+<div style="display:block;text-align:left;  margin: auto; padding-top: 14%; padding-left: 3%;" ><a href="https://some.addres">
+	<h2> <b>&nbsp;&nbsp;'THEY WILL SHUT DOWN&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;TENNESSEE' </b></h2></a>
+	<a href="https://some.addres">
+<p >&nbsp;&nbsp;&nbsp;Why NFL scouts believe PIT's 'best front seven in &nbsp;&nbsp;&nbsp;football' will prove they're for real vs. Derrick Henry &nbsp;&nbsp;&nbsp;and the 5-0 Titans 📲 </p> <br>
+</a>
+</div>
+
+<br/>
+<br/>
+<br/>
+<div style="display:block;text-align:left; padding-left: 10%; padding-right: 10%; padding-top: 3%;   margin: auto;">
+	<a href="https://some.addres" imageanchor="1"><img align="right" src="https://media.bleacherreport.com/f_auto,w_768,q_auto,c_fill/br-cms/ac/47/7a/fd/e94f/4499/8102/2505e37af3d8/crop_exact_GettyImages-1278482143.jpg" border="0" width="65%"></a>
+<div style="display:block;text-align:left;  margin: auto; padding-top: 14%; padding-right: 1%; " ><a href="https://some.addres">
+	<h2 > <b>TEAMS POISED FORA 2ND-HALF SURGE</b></h2></a>
+	<a href="https://some.addres">
+<p >Four teams our writer says are set to make a run ➡️</p> <br>
+</a>
+</div>
+</div>
+
+
+  </div>
+</div>
+
+ <br />
+  <br />
+ <br />
+  <br />
+<div style="background-color: black;">
+ <p class="solid"
+ style="color: white;
+font-family:Arial;
+background-color: transparent;
+position: relative;
+"
+
+ >
+ <br />
+  <b> T R E N D I N G</b>
+
+
+<p style="margin-left: 1.8em;margin-right: 1.8em;margin-top: 3.0em;margin-bottom: 3.0em; background-color: black; padding: 5%; " >
+
+ <a href="https://play.google.com/store/apps/details?id=com.case7games.mixpotion">
+         <img alt="Mix poision" src="https://img.bleacherreport.net/cms/media/image/41/31/7c/f4/6880/4a17/be29/8f3f98fcd787/crop_exact_perfectPicks_APP-_1_app03__7_.jpg?q=90&w=627&h=418"
+         width="360" height="460">
+      </a>
+
+
+ &nbsp; &nbsp;&nbsp;
+ <a href="https://megaartsstudio.onelink.me/1Nz1/fc15286e">
+         <img alt="Hidden Objects 3D Diorama" src="https://media.bleacherreport.com/f_auto,w_627,q_auto,c_fill/br-cms/b3/ac/78/bf/c8b6/4871/8c67/958eaf5b49a1/crop_exact_Screen_Shot_2020-10-23_at_2.15.36_PM.jpg"
+         width="360" height="460">
+
+</a>
+ &nbsp; &nbsp;&nbsp;
+ <a href="https://play.google.com/store/apps/details?id=com.case7games.ringandrun">
+         <img alt="Ring And Run" src="https://www.live-score-app.com/img/clients/doubletake/reds-1.png"
+       width="360" height="460">
+      </a>
+
+
+
+ <a href="https://play.google.com/store/apps/details?id=com.case7games.funjetpack">
+         <br /> <img alt="Fun Jetpack" src="https://pbs.twimg.com/media/Ek_FMdRXUAEEvxv?format=jpg&name=360x360"
+         width="360" height="460">
+      </a>
+
+ &nbsp; &nbsp;&nbsp;
+ <a href="https://play.google.com/store/apps/details?id=com.case7games.colorwhooper">
+       <img alt="Color Whopper Tower : Helix Bump 3D Arcade Game" src="https://pbs.twimg.com/media/Ek-_xGYVMAAhIu9?format=jpg&name=360x360"
+        width="360" height="460">
+      </a>
+
+ &nbsp; &nbsp;&nbsp;
+ <a href="https://play.google.com/store/apps/details?id=com.case7.crazypilot">
+         <img alt="Crazy Pilot" src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/1f/09/38/30/7dd2/4ff2/ae5b/a7a07fa26333/crop_exact_3x2-template-tucker.jpg"
+        width="360" height="460">
+      </a>
+
+      </p>
+<p align="center">
+  <a href="https://">
+<button style="background-color: black; color: white;" class="button button2"><b>Show More  </b></button>
+</a>
+<br />
+</div>
+</p>
+</p>
+
+
+</script>
+
+<div style="background-color: yellow; padding-left: 8%; padding-top: 5%; padding-bottom:5%; ">
+
+<br />
+<br />
+<h1 style="text-align: center;"><b>B / R  G R I D I R O N</b></h1>
+<br />
+	  <img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/f5/4e/c3/4a/5391/4434/9e78/ef02ab1c560a/crop_exact_gh507_THUMB_3x2.jpg" style="width:45%;">
+	    <img src="https://media.bleacherreport.com/f_auto,w_705,h_470,q_auto,c_fill/br-cms/c4/ee/bb/48/1ad8/4274/badb/c51309d652b3/crop_exact_3-2_THUMB_SPLIT_APP__2_.jpg" style="width:45%;" >
+
+<br />
+<br />
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(6)"></span> 
+          <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+                <span class="dot" onclick="currentSlide(10)"></span> 
+
+
+</div>
+
+
+
+</div>
+
+<img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/a0/f9/12/35/a66c/4e07/838b/5ecebc5a036e/crop_exact_Duval3-2.jpg" alt="Flowers in Chania" width="100%" height="900px">
+
+<div class="container" style="padding-left: 60%;">
+
+
+  <div class="text-blockk">
+
+ <div class="series">
+    	<p  >  <img src="https://bleacherreport.com/img/atoms/svg/icons/slash.svg" alt="splash" style="width:12px;">
+    		<b>N B A</b></p>
+
+</div>
+
+    <h1 >
+
+            <a  href="#" ><b>DID MEGA-RECRUIT MAKE A MISTAKE?</b></a>
+    </h1>
+
+    	<p  >  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Morse_code_dash.svg/1200px-Morse_code_dash.svg.png" alt="splash" style="width:30%;"></p>
+    <p>
+            <a  href="#" >Duke one-and-done Trevon Duval thought he'd be a first-rounder. He went undrafted. How he's keeping his NBA dreams alive ➡️
+</a>
+    </p>
+
+      	<p class="seriess">by Clevis Murray</p>
+
+  </div>
+
+<br />
+<br />
+</div>
+<div style="background-color: skyblue; padding-left: 8%; padding-top: 5%; padding-bottom:5%; ">
+
+<h1 style="text-align: center;"><b>T A K E  I T  T H E R E</b></h1>
+<br />
+	  <img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/21/f6/f9/a8/4fb1/4fc3/a2ec/c9b57f7a3df1/crop_exact_DeMarMainImage3x2app_copy.jpg" style="width:45%;">
+	    <img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/b2/10/55/43/bb03/4e12/9dd9/4af1b6df85e8/crop_exact_DefiningJenkins_3x2_copy.jpg" style="width:45%;" >
+
+<br />
+<br />
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(6)"></span> 
+          <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+                <span class="dot" onclick="currentSlide(10)"></span> 
+
+<br />
+<br />
+<br/>
+<br/>
+<br/>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+<h1 style="text-align: center;"><b>M L B</b></h1>
+<br/>
+<div style="display:block;text-align:left; padding-left: 10%; padding-right: 10%;  margin: auto;">
+	<a href="https://some.addres" imageanchor="1"><img align="left" src="https://media.bleacherreport.com/f_auto,w_768,q_auto,c_fill/br-cms/af/b0/5e/01/2f65/4670/a9b3/5edb8bbf5631/crop_exact_full_image.jpeg" border="0" width="60%"></a>
+<div style="display:block;text-align:left;  margin: auto; padding-top: 14%; padding-left: 3%;" ><a href="https://some.addres">
+	<h2> <b>&nbsp;&nbsp;DODGERS' OFFENSIVE FIREPOWER IS TAKING OVER WORLD SERIES&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </b></h2></a>
+	<a href="https://some.addres">
+<p >&nbsp;&nbsp;&nbsp;Stars must play like stars to win the World Series. And these Dodgers are a baseball astronomer’s dream ⭐
+
+</p>
+</a>
+</div>
+<br/>
+<br/>
+<br/>
+<div style="display:block;text-align:left; padding-left: 10%; padding-right: 10%; padding-top: 3%;   margin: auto;">
+	<br/>
+<br/>
+	<a href="https://some.addres" imageanchor="1"><img align="right" src="https://media.bleacherreport.com/f_auto,w_768,q_auto,c_fill/br-cms/03/d9/20/e4/9d1a/404e/ab20/578416bb0903/crop_exact_GettyImages-1280655421.jpg" border="0" width="65%"></a>
+<div style="display:block;text-align:left;  margin: auto; padding-top: 14%; padding-right: 1%; " ><a href="https://some.addres">
+	<h2 > <b>STOCK WATCH FOR FREE AGENTS IN THE PLAYOFFS</b></h2></a>
+	<a href="https://some.addres">
+<p >Did these free agents' stock go up or down after their October runs?</p> <br>
+</a>
+</div>
+</div>
+</p> 
+</a>
+</div>
+<br /><br />
+<img src="https://media.bleacherreport.com/f_auto,w_1440,q_auto,c_fill/br-cms/55/24/ed/69/6bf7/4538/9702/f5cf3c1f4f8c/crop_exact_3x2-template-contentbox-tucker.jpg" alt="Flowers in Chania" width="100%" height="900px">
+
+<div class="container">
+
+
+  <div class="text-block">
+
+ <div class="series">
+    	<p  >  <img src="https://bleacherreport.com/img/atoms/svg/icons/slash.svg" alt="splash" style="width:12px;">
+    		<b>UNDERRATED</b></p>
+
+</div>
+
+    <h1 class="solid">
+
+            <a  href="#" ><b>TUCKER KICKS 67-YARD FG</b></a>
+    </h1>
+
+    	<p  >  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Morse_code_dash.svg/1200px-Morse_code_dash.svg.png" alt="splash" style="width:30%;"></p>
+
+    <p>
+            <a  href="#" >Ravens All-Pro Justin Tucker doesn’t have a 99 kick power in Madden. So he tries to fix that. Watch ‘Underrated’ 🎥
+</a>
+    </p>
+    <br /><br />
+</div>
+</div>
+<br /><br />
+
+<footer>
+	<br />
+	<img src="data:image/png;base64,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" width="80" height="60"></a>
+ 
+
+<br /><br />
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+<br /><br />
+
+ 
+
+
+
+      <div
+        class="container mx-auto text-white text-center">
+
+       <b> AboutAdvertiseContact UsCareersCommunity GuidelinesPrivacyCookie PreferencesTerms Of UseTicketsAdChoices </b>
+        <br />
+        <br />
+Copyright © 2020 Bleacher Report, Inc. Turner Broadcasting System, Inc. All Rights Reserved. BleacherReport.com is part of Bleacher Report – Turner Sports Network, part of the Turner Sports and Entertainment Network. Certain photos copyright © 2020 Getty Images. Any commercial use or distribution without the express written consent of Getty Images is strictly prohibited. AdChoices 
+      </div>
+    </div>   
+        
+</footer>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
